@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string"
+        },
+        "count": {
+            "type": "string"
+        },
+        "page": {
+            "type": "string"
+        },
+        "cursor": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "integer"
+        }
+    }
+}

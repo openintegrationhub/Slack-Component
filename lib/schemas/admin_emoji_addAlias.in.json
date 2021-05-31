@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "Authentication token. Requires scope: `admin.teams:write`",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The name of the emoji to be aliased. Colons (`:myemoji:`) around the value are not required, although they may be included.",
+                    "type": "string"
+                },
+                "alias_for": {
+                    "description": "The alias of the emoji.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "token",
+                "name",
+                "alias_for"
+            ]
+        }
+    }
+}

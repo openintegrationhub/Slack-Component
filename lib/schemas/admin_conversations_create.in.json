@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the public or private channel to create.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Description of the public or private channel to create.",
+                    "type": "string"
+                },
+                "is_private": {
+                    "description": "When `true`, creates a private channel instead of a public channel",
+                    "type": "boolean"
+                },
+                "org_wide": {
+                    "description": "When `true`, the channel will be available org-wide. Note: if the channel is not `org_wide=true`, you must specify a `team_id` for this channel",
+                    "type": "boolean"
+                },
+                "team_id": {
+                    "description": "The workspace to create the channel in. Note: this argument is required unless you set `org_wide=true`.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "is_private"
+            ]
+        }
+    }
+}

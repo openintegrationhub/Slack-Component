@@ -1,0 +1,210 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "profile": {
+            "additionalProperties": false,
+            "properties": {
+                "always_active": {
+                    "type": "boolean"
+                },
+                "api_app_id": {
+                    "pattern": "^(A[A-Z0-9]{1,})?$",
+                    "title": "App ID or empty string",
+                    "type": "string"
+                },
+                "avatar_hash": {
+                    "type": "string"
+                },
+                "bot_id": {
+                    "pattern": "^B[A-Z0-9]{8,}$",
+                    "title": "Bot User ID",
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "display_name_normalized": {
+                    "type": "string"
+                },
+                "email": {
+                    "format": "email",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "fields": {
+                    "items": {
+                        "type": "object"
+                    },
+                    "oneOf": [
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "array",
+                            "items": {}
+                        }
+                    ],
+                    "nullable": true
+                },
+                "first_name": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "guest_expiration_ts": {
+                    "nullable": true,
+                    "type": "integer"
+                },
+                "guest_invited_by": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_1024": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_192": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_24": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_32": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_48": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_512": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_72": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "image_original": {
+                    "format": "uri",
+                    "nullable": true,
+                    "type": "string"
+                },
+                "is_app_user": {
+                    "type": "boolean"
+                },
+                "is_custom_image": {
+                    "type": "boolean"
+                },
+                "is_restricted": {
+                    "nullable": true,
+                    "type": "boolean"
+                },
+                "is_ultra_restricted": {
+                    "nullable": true,
+                    "type": "boolean"
+                },
+                "last_avatar_image_hash": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "memberships_count": {
+                    "type": "integer"
+                },
+                "name": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "pronouns": {
+                    "type": "string"
+                },
+                "real_name": {
+                    "type": "string"
+                },
+                "real_name_normalized": {
+                    "type": "string"
+                },
+                "skype": {
+                    "type": "string"
+                },
+                "status_default_emoji": {
+                    "type": "string"
+                },
+                "status_default_text": {
+                    "type": "string"
+                },
+                "status_default_text_canonical": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "status_emoji": {
+                    "type": "string"
+                },
+                "status_expiration": {
+                    "type": "integer"
+                },
+                "status_text": {
+                    "type": "string"
+                },
+                "status_text_canonical": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "team": {
+                    "pattern": "^[TE][A-Z0-9]{8,}$",
+                    "title": "Team or Enterprise ID",
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "integer"
+                },
+                "user_id": {
+                    "type": "string"
+                },
+                "username": {
+                    "nullable": true,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "real_name",
+                "display_name",
+                "avatar_hash",
+                "real_name_normalized",
+                "display_name_normalized",
+                "title",
+                "phone",
+                "skype",
+                "status_text",
+                "status_emoji",
+                "fields"
+            ],
+            "title": "User profile object",
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "ID for the workspace where the invite request was made.",
+                    "type": "string"
+                },
+                "invite_request_id": {
+                    "description": "ID of the request to invite.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "invite_request_id"
+            ]
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "profile": {
+            "additionalProperties": false,
+            "properties": {
+                "fields": {
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "field_name": {
+                                "nullable": true,
+                                "type": "string"
+                            },
+                            "hint": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "pattern": "^X[a-zA-Z0-9]{9,}$",
+                                "type": "string"
+                            },
+                            "is_hidden": {
+                                "type": "boolean"
+                            },
+                            "label": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "nullable": true
+                                        },
+                                        {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "is_custom": {
+                                                    "nullable": true,
+                                                    "type": "boolean"
+                                                },
+                                                "is_multiple_entry": {
+                                                    "nullable": true,
+                                                    "type": "boolean"
+                                                },
+                                                "is_protected": {
+                                                    "nullable": true,
+                                                    "type": "boolean"
+                                                },
+                                                "is_scim": {
+                                                    "nullable": true,
+                                                    "type": "boolean"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            },
+                            "ordering": {
+                                "type": "number"
+                            },
+                            "possible_values": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "nullable": true,
+                                "type": "array"
+                            },
+                            "type": {
+                                "enum": [
+                                    "text",
+                                    "date",
+                                    "link",
+                                    "mailto",
+                                    "options_list",
+                                    "user"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "ordering",
+                            "label",
+                            "hint",
+                            "type"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "fields"
+            ],
+            "type": "object"
+        }
+    }
+}

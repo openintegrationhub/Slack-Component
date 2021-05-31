@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "properties": {
+        "logs": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "admin_app_id": {
+                        "pattern": "^A[A-Z0-9]{1,}$",
+                        "title": "App ID",
+                        "type": "string"
+                    },
+                    "app_id": {
+                        "pattern": "^A[A-Z0-9]{1,}$",
+                        "title": "App ID",
+                        "type": "string"
+                    },
+                    "app_type": {
+                        "type": "string"
+                    },
+                    "change_type": {
+                        "type": "string"
+                    },
+                    "channel": {
+                        "pattern": "^[CGD][A-Z0-9]{8,}$",
+                        "title": "Channel-like conversation ID",
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "scope": {
+                        "type": "string"
+                    },
+                    "service_id": {
+                        "type": "string"
+                    },
+                    "service_type": {
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "pattern": "^[UW][A-Z0-9]{2,}$",
+                        "title": "User ID",
+                        "type": "string"
+                    },
+                    "user_name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "user_id",
+                    "user_name",
+                    "date",
+                    "change_type",
+                    "app_type",
+                    "app_id",
+                    "scope"
+                ],
+                "type": "object"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "paging": {
+            "additionalProperties": false,
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "pages": {
+                    "type": "integer"
+                },
+                "per_page": {
+                    "type": "integer"
+                },
+                "spill": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "page",
+                "total"
+            ],
+            "title": "paging object",
+            "type": "object"
+        }
+    }
+}

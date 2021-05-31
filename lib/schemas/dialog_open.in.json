@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "dialog": {
+            "required": true,
+            "type": "string"
+        },
+        "trigger_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

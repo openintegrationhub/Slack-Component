@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "user_ids": {
+                    "description": "The users to invite.",
+                    "type": "string"
+                },
+                "channel_id": {
+                    "description": "The channel that the users will be invited to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "user_ids",
+                "channel_id"
+            ]
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "workflow_step_edit_id": {
+            "required": true,
+            "type": "string"
+        },
+        "inputs": {
+            "type": "string"
+        },
+        "outputs": {
+            "type": "string"
+        },
+        "step_name": {
+            "type": "string"
+        },
+        "step_image_url": {
+            "type": "string"
+        }
+    }
+}

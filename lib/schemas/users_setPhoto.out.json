@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "profile": {
+            "additionalProperties": false,
+            "properties": {
+                "avatar_hash": {
+                    "pattern": "^[0-9a-f]{12}$",
+                    "type": "string"
+                },
+                "image_1024": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_192": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_24": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_32": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_48": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_512": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_72": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "image_original": {
+                    "format": "uri",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "image_24",
+                "image_32",
+                "image_48",
+                "image_72",
+                "image_192",
+                "image_512",
+                "image_1024",
+                "image_original",
+                "avatar_hash"
+            ],
+            "type": "object"
+        }
+    }
+}

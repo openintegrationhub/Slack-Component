@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "ID of the team that the session belongs to",
+                    "type": "string"
+                },
+                "session_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "team_id",
+                "session_id"
+            ]
+        }
+    }
+}

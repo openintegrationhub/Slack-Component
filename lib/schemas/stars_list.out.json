@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "count": {
+            "type": "integer"
+        },
+        "page": {
+            "type": "integer"
+        },
+        "pages": {
+            "type": "integer"
+        },
+        "per_page": {
+            "type": "integer"
+        },
+        "spill": {
+            "type": "integer"
+        },
+        "total": {
+            "type": "integer"
+        }
+    }
+}

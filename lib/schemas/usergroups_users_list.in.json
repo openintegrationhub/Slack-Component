@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "include_disabled": {
+            "type": "boolean"
+        },
+        "usergroup": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "ID for the workspace to set the name for.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The new name of the workspace.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "team_id",
+                "name"
+            ]
+        }
+    }
+}

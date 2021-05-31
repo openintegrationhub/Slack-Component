@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "self": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "pattern": "^[UW][A-Z0-9]{2,}$",
+                    "title": "User ID",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "type": "object"
+        },
+        "team": {
+            "additionalProperties": false,
+            "properties": {
+                "domain": {
+                    "type": "string"
+                },
+                "id": {
+                    "pattern": "^[T][A-Z0-9]{2,}$",
+                    "title": "Team ID",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "domain"
+            ],
+            "type": "object"
+        },
+        "url": {
+            "format": "uri",
+            "type": "string"
+        }
+    }
+}

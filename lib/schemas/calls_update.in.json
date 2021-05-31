@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "`id` returned by the [`calls.add`](/methods/calls.add) method.",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The name of the Call.",
+                    "type": "string"
+                },
+                "join_url": {
+                    "description": "The URL required for a client to join the Call.",
+                    "type": "string"
+                },
+                "desktop_app_join_url": {
+                    "description": "When supplied, available Slack clients will attempt to directly launch the 3rd-party Call with this URL.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ]
+        }
+    }
+}

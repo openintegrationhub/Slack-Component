@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "The ID (`T1234`) of the workspace.",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "The email address of the person to invite.",
+                    "type": "string"
+                },
+                "channel_ids": {
+                    "description": "A comma-separated list of `channel_id`s for this user to join. At least one channel is required.",
+                    "type": "string"
+                },
+                "custom_message": {
+                    "description": "An optional message to send to the user in the invite email.",
+                    "type": "string"
+                },
+                "real_name": {
+                    "description": "Full name of the user.",
+                    "type": "string"
+                },
+                "resend": {
+                    "description": "Allow this invite to be resent in the future if a user has not signed up yet. (default: false)",
+                    "type": "boolean"
+                },
+                "is_restricted": {
+                    "description": "Is this user a multi-channel guest user? (default: false)",
+                    "type": "boolean"
+                },
+                "is_ultra_restricted": {
+                    "description": "Is this user a single channel guest user? (default: false)",
+                    "type": "boolean"
+                },
+                "guest_expiration_ts": {
+                    "description": "Timestamp when guest account should be disabled. Only include this timestamp if you are inviting a guest user and you want their account to expire on a certain date.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "team_id",
+                "email",
+                "channel_ids"
+            ]
+        }
+    }
+}

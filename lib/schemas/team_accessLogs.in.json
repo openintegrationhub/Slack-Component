@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "before": {
+            "type": "string"
+        },
+        "count": {
+            "type": "string"
+        },
+        "page": {
+            "type": "string"
+        }
+    }
+}

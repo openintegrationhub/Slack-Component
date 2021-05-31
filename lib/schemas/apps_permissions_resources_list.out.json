@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "resources": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "title": "An ID for a resource",
+                        "type": "string",
+                        "x-examples": [
+                            "T0DES3UAN",
+                            "C0ABC1ABC"
+                        ]
+                    },
+                    "type": {
+                        "title": "The type of resource the `id` corresponds to",
+                        "type": "string",
+                        "x-examples": [
+                            "team",
+                            "channel",
+                            "mpim"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "response_metadata": {
+            "additionalProperties": false,
+            "properties": {
+                "next_cursor": {
+                    "type": "string",
+                    "x-examples": [
+                        "dGVhbTpDMUg5UkVTR0w="
+                    ]
+                }
+            },
+            "required": [
+                "next_cursor"
+            ],
+            "type": "object"
+        }
+    }
+}

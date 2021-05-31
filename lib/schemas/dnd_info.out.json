@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "dnd_enabled": {
+            "type": "boolean"
+        },
+        "next_dnd_end_ts": {
+            "type": "integer"
+        },
+        "next_dnd_start_ts": {
+            "type": "integer"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "snooze_enabled": {
+            "type": "boolean"
+        },
+        "snooze_endtime": {
+            "type": "integer"
+        },
+        "snooze_remaining": {
+            "type": "integer"
+        }
+    }
+}

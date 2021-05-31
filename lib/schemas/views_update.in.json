@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "view_id": {
+            "type": "string"
+        },
+        "external_id": {
+            "type": "string"
+        },
+        "view": {
+            "type": "string"
+        },
+        "hash": {
+            "type": "string"
+        }
+    }
+}

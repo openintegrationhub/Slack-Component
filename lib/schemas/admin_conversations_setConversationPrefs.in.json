@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "description": "The channel to set the prefs for",
+                    "type": "string"
+                },
+                "prefs": {
+                    "description": "The prefs for this channel in a stringified JSON format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "channel_id",
+                "prefs"
+            ]
+        }
+    }
+}

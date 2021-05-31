@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "channel": {
+                    "description": "Channel or conversation to set the read cursor for.",
+                    "type": "string"
+                },
+                "ts": {
+                    "description": "Unique identifier of message you want marked as most recently seen in this conversation.",
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

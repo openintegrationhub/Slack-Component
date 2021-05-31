@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string"
+        },
+        "user": {
+            "type": "string"
+        },
+        "channel": {
+            "type": "string"
+        },
+        "ts_from": {
+            "type": "number"
+        },
+        "ts_to": {
+            "type": "number"
+        },
+        "types": {
+            "type": "string"
+        },
+        "count": {
+            "type": "string"
+        },
+        "page": {
+            "type": "string"
+        },
+        "show_files_hidden_by_limit": {
+            "type": "boolean"
+        }
+    }
+}

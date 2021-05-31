@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "workflow_step_execute_id": {
+            "required": true,
+            "type": "string"
+        },
+        "error": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

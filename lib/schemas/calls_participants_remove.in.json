@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "`id` returned by the [`calls.add`](/methods/calls.add) method.",
+                    "type": "string"
+                },
+                "users": {
+                    "description": "The list of users to remove as participants in the Call. [Read more on how to specify users here](/apis/calls#users).",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "users"
+            ]
+        }
+    }
+}

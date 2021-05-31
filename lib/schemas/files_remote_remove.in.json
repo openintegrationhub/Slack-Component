@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "Authentication token. Requires scope: `remote_files:write`",
+                    "type": "string"
+                },
+                "file": {
+                    "description": "Specify a file by providing its ID.",
+                    "type": "string"
+                },
+                "external_id": {
+                    "description": "Creator defined GUID for the file.",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

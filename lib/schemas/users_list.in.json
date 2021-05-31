@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "integer"
+        },
+        "cursor": {
+            "type": "string"
+        },
+        "include_locale": {
+            "type": "boolean"
+        }
+    }
+}

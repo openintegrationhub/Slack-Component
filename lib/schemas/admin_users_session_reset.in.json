@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "description": "The ID of the user to wipe sessions for",
+                    "type": "string"
+                },
+                "mobile_only": {
+                    "description": "Only expire mobile sessions (default: false)",
+                    "type": "boolean"
+                },
+                "web_only": {
+                    "description": "Only expire web sessions (default: false)",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "user_id"
+            ]
+        }
+    }
+}

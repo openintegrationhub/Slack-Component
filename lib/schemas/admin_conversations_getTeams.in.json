@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "channel_id": {
+            "required": true,
+            "type": "string"
+        },
+        "cursor": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "integer"
+        }
+    }
+}

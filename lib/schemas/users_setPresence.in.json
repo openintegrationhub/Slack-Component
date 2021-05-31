@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "presence": {
+                    "description": "Either `auto` or `away`",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "presence"
+            ]
+        }
+    }
+}

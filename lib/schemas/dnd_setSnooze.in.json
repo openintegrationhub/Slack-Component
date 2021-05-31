@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "Authentication token. Requires scope: `dnd:write`",
+                    "type": "string"
+                },
+                "num_minutes": {
+                    "description": "Number of minutes, from now, to snooze until.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "token",
+                "num_minutes"
+            ]
+        }
+    }
+}

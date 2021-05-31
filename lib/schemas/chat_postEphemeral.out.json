@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "message_ts": {
+            "pattern": "^\\d{10}\\.\\d{6}$",
+            "title": "Timestamp in format 0123456789.012345",
+            "type": "string"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        }
+    }
+}

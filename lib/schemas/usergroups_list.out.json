@@ -1,0 +1,165 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "usergroups": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "auto_provision": {
+                        "type": "boolean"
+                    },
+                    "auto_type": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "nullable": true
+                                },
+                                {
+                                    "enum": [
+                                        "owner",
+                                        "admin"
+                                    ],
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "channel_count": {
+                        "type": "integer"
+                    },
+                    "created_by": {
+                        "pattern": "^[UW][A-Z0-9]{2,}$",
+                        "title": "User ID",
+                        "type": "string"
+                    },
+                    "date_create": {
+                        "type": "integer"
+                    },
+                    "date_delete": {
+                        "type": "integer"
+                    },
+                    "date_update": {
+                        "type": "integer"
+                    },
+                    "deleted_by": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "nullable": true
+                                },
+                                {
+                                    "pattern": "^[UW][A-Z0-9]{2,}$",
+                                    "title": "User ID",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "enterprise_subteam_id": {
+                        "type": "string"
+                    },
+                    "handle": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "pattern": "^S[A-Z0-9]{2,}$",
+                        "title": "Subteam ID",
+                        "type": "string"
+                    },
+                    "is_external": {
+                        "type": "boolean"
+                    },
+                    "is_subteam": {
+                        "type": "boolean"
+                    },
+                    "is_usergroup": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "prefs": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "channels": {
+                                "items": {
+                                    "pattern": "^[C][A-Z0-9]{2,}$",
+                                    "title": "Channel ID",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "groups": {
+                                "items": {
+                                    "pattern": "^[G][A-Z0-9]{8,}$",
+                                    "title": "Private Channel ID",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "channels",
+                            "groups"
+                        ],
+                        "type": "object"
+                    },
+                    "team_id": {
+                        "pattern": "^[T][A-Z0-9]{2,}$",
+                        "title": "Team ID",
+                        "type": "string"
+                    },
+                    "updated_by": {
+                        "pattern": "^[UW][A-Z0-9]{2,}$",
+                        "title": "User ID",
+                        "type": "string"
+                    },
+                    "user_count": {
+                        "type": "integer"
+                    },
+                    "users": {
+                        "items": {
+                            "pattern": "^[UW][A-Z0-9]{2,}$",
+                            "title": "User ID",
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "id",
+                    "team_id",
+                    "is_usergroup",
+                    "is_subteam",
+                    "name",
+                    "description",
+                    "handle",
+                    "is_external",
+                    "date_create",
+                    "date_update",
+                    "date_delete",
+                    "auto_type",
+                    "auto_provision",
+                    "enterprise_subteam_id",
+                    "created_by",
+                    "updated_by",
+                    "deleted_by",
+                    "prefs"
+                ],
+                "title": "Subteam/Usergroup Object",
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

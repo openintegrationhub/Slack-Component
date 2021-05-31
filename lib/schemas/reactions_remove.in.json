@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Reaction (emoji) name.",
+                    "type": "string"
+                },
+                "file": {
+                    "description": "File to remove reaction from.",
+                    "type": "string"
+                },
+                "file_comment": {
+                    "description": "File comment to remove reaction from.",
+                    "type": "string"
+                },
+                "channel": {
+                    "description": "Channel where the message to remove reaction from was posted.",
+                    "type": "string"
+                },
+                "timestamp": {
+                    "description": "Timestamp of the message to remove reaction from.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

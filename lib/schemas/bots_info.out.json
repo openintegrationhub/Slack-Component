@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "bot": {
+            "additionalProperties": false,
+            "properties": {
+                "app_id": {
+                    "pattern": "^A[A-Z0-9]{1,}$",
+                    "title": "App ID",
+                    "type": "string"
+                },
+                "deleted": {
+                    "type": "boolean"
+                },
+                "icons": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "image_36": {
+                            "format": "uri",
+                            "type": "string"
+                        },
+                        "image_48": {
+                            "format": "uri",
+                            "type": "string"
+                        },
+                        "image_72": {
+                            "format": "uri",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "image_36",
+                        "image_48",
+                        "image_72"
+                    ],
+                    "type": "object"
+                },
+                "id": {
+                    "pattern": "^B[A-Z0-9]{8,}$",
+                    "title": "Bot User ID",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "integer"
+                },
+                "user_id": {
+                    "pattern": "^[UW][A-Z0-9]{2,}$",
+                    "title": "User ID",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "deleted",
+                "name",
+                "updated",
+                "app_id",
+                "icons"
+            ],
+            "type": "object"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        }
+    }
+}

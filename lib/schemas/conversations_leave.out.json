@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "not_in_channel": {
+            "enum": [
+                true
+            ],
+            "type": "boolean"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        }
+    }
+}

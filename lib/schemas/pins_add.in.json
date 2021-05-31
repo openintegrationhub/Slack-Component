@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "channel": {
+                    "description": "Channel to pin the item in.",
+                    "type": "string"
+                },
+                "timestamp": {
+                    "description": "Timestamp of the message to pin.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "channel"
+            ]
+        }
+    }
+}

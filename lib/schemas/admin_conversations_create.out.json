@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "channel_id": {
+            "pattern": "^[C][A-Z0-9]{2,}$",
+            "title": "Channel ID",
+            "type": "string"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        }
+    }
+}

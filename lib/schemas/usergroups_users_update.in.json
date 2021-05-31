@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "include_count": {
+                    "description": "Include the number of users in the User Group.",
+                    "type": "boolean"
+                },
+                "usergroup": {
+                    "description": "The encoded ID of the User Group to update.",
+                    "type": "string"
+                },
+                "users": {
+                    "description": "A comma separated string of encoded user IDs that represent the entire list of users for the User Group.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "usergroup",
+                "users"
+            ]
+        }
+    }
+}

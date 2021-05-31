@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "description": "The channel to be disconnected from some workspaces.",
+                    "type": "string"
+                },
+                "leaving_team_ids": {
+                    "description": "The team to be removed from the channel. Currently only a single team id can be specified.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "channel_id"
+            ]
+        }
+    }
+}

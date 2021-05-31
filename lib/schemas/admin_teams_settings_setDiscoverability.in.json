@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "The ID of the workspace to set discoverability on.",
+                    "type": "string"
+                },
+                "discoverability": {
+                    "description": "This workspace's discovery setting. It must be set to one of `open`, `invite_only`, `closed`, or `unlisted`.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "team_id",
+                "discoverability"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "snooze_enabled": {
+            "type": "boolean"
+        },
+        "snooze_endtime": {
+            "type": "integer"
+        },
+        "snooze_remaining": {
+            "type": "integer"
+        }
+    }
+}

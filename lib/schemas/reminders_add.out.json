@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "reminder": {
+            "additionalProperties": false,
+            "properties": {
+                "complete_ts": {
+                    "type": "integer"
+                },
+                "creator": {
+                    "pattern": "^[UW][A-Z0-9]{2,}$",
+                    "title": "User ID",
+                    "type": "string"
+                },
+                "id": {
+                    "pattern": "^Rm[A-Z0-9]{8,}$",
+                    "title": "Reminder ID",
+                    "type": "string"
+                },
+                "recurring": {
+                    "type": "boolean"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "integer"
+                },
+                "user": {
+                    "pattern": "^[UW][A-Z0-9]{2,}$",
+                    "title": "User ID",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "creator",
+                "user",
+                "text",
+                "recurring"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "channel": {
+            "type": "string"
+        },
+        "file": {
+            "type": "string"
+        },
+        "file_comment": {
+            "type": "string"
+        },
+        "full": {
+            "type": "boolean"
+        },
+        "timestamp": {
+            "type": "string"
+        }
+    }
+}

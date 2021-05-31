@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "already_closed": {
+            "type": "boolean"
+        },
+        "no_op": {
+            "type": "boolean"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "response_metadata": {
+            "additionalProperties": false,
+            "properties": {
+                "next_cursor": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "next_cursor"
+            ],
+            "type": "object"
+        },
+        "team_ids": {
+            "items": {
+                "pattern": "^[T][A-Z0-9]{2,}$",
+                "title": "Team ID",
+                "type": "string"
+            },
+            "type": "array"
+        }
+    }
+}

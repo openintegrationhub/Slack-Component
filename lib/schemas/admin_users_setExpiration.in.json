@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "The ID (`T1234`) of the workspace.",
+                    "type": "string"
+                },
+                "user_id": {
+                    "description": "The ID of the user to set an expiration for.",
+                    "type": "string"
+                },
+                "expiration_ts": {
+                    "description": "Timestamp when guest account should be disabled.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "team_id",
+                "user_id",
+                "expiration_ts"
+            ]
+        }
+    }
+}

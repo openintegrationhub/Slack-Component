@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "usergroup_id": {
+                    "description": "An encoded usergroup (IDP Group) ID.",
+                    "type": "string"
+                },
+                "team_ids": {
+                    "description": "A comma separated list of encoded team (workspace) IDs. Each workspace *MUST* belong to the organization associated with the token.",
+                    "type": "string"
+                },
+                "auto_provision": {
+                    "description": "When `true`, this method automatically creates new workspace accounts for the IDP group members.",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "usergroup_id",
+                "team_ids"
+            ]
+        }
+    }
+}

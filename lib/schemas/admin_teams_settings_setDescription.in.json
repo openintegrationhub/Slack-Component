@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "team_id": {
+                    "description": "ID for the workspace to set the description for.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The new description for the workspace.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "team_id",
+                "description"
+            ]
+        }
+    }
+}

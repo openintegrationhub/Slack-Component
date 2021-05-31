@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "revoked": {
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "team": {
+            "additionalProperties": false,
+            "properties": {
+                "archived": {
+                    "type": "boolean"
+                },
+                "avatar_base_url": {
+                    "format": "uri",
+                    "type": "string"
+                },
+                "created": {
+                    "type": "integer"
+                },
+                "date_create": {
+                    "type": "integer"
+                },
+                "deleted": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "discoverable": {
+                    "items": {
+                        "anyOf": [
+                            {
+                                "nullable": true
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "domain": {
+                    "type": "string"
+                },
+                "email_domain": {
+                    "type": "string"
+                },
+                "enterprise_id": {
+                    "pattern": "^[E][A-Z0-9]{8,}$",
+                    "title": "Enterprise ID",
+                    "type": "string"
+                },
+                "enterprise_name": {
+                    "title": "Name of the enterprise org",
+                    "type": "string"
+                },
+                "external_org_migrations": {
+                    "properties": {
+                        "current": {
+                            "items": {
+                                "properties": {
+                                    "date_started": {
+                                        "type": "integer"
+                                    },
+                                    "team_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "team_id",
+                                    "date_started"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "date_updated": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "date_updated",
+                        "current"
+                    ],
+                    "title": "External Org Migrations",
+                    "type": "object"
+                },
+                "has_compliance_export": {
+                    "type": "boolean"
+                },
+                "icon": {
+                    "properties": {
+                        "image_102": {
+                            "type": "string"
+                        },
+                        "image_132": {
+                            "type": "string"
+                        },
+                        "image_230": {
+                            "type": "string"
+                        },
+                        "image_34": {
+                            "type": "string"
+                        },
+                        "image_44": {
+                            "type": "string"
+                        },
+                        "image_68": {
+                            "type": "string"
+                        },
+                        "image_88": {
+                            "type": "string"
+                        },
+                        "image_default": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "pattern": "^[TE][A-Z0-9]{8,}$",
+                    "title": "Team or Enterprise ID",
+                    "type": "string"
+                },
+                "is_assigned": {
+                    "type": "boolean"
+                },
+                "is_enterprise": {
+                    "type": "integer"
+                },
+                "is_over_storage_limit": {
+                    "type": "boolean"
+                },
+                "limit_ts": {
+                    "type": "integer"
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "messages_count": {
+                    "type": "integer"
+                },
+                "msg_edit_window_mins": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "over_integrations_limit": {
+                    "type": "boolean"
+                },
+                "over_storage_limit": {
+                    "type": "boolean"
+                },
+                "pay_prod_cur": {
+                    "type": "string"
+                },
+                "plan": {
+                    "enum": [
+                        "",
+                        "std",
+                        "plus",
+                        "compliance",
+                        "enterprise"
+                    ],
+                    "type": "string"
+                },
+                "primary_owner": {
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "email"
+                    ],
+                    "type": "object"
+                },
+                "sso_provider": {
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "domain",
+                "email_domain",
+                "icon"
+            ],
+            "title": "Team Object",
+            "type": "object"
+        }
+    }
+}

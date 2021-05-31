@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "user": {
+            "type": "string"
+        },
+        "full": {
+            "type": "boolean"
+        },
+        "count": {
+            "type": "integer"
+        },
+        "page": {
+            "type": "integer"
+        },
+        "cursor": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "integer"
+        }
+    }
+}

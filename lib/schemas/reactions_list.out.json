@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "messages": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "next_cursor": {
+            "type": "string"
+        },
+        "warnings": {
+            "items": {
+                "enum": [
+                    "method_deprecated"
+                ],
+                "type": "string"
+            },
+            "type": "array"
+        }
+    }
+}

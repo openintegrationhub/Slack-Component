@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "scopes": {
+            "additionalProperties": true,
+            "properties": {
+                "app_home": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "channel": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "group": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "im": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "mpim": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "team": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "user": {
+                    "items": {
+                        "title": "Named OAuth scopes",
+                        "type": "string",
+                        "x-examples": [
+                            "chat:write",
+                            "im:history",
+                            "im:read"
+                        ]
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

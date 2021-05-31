@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "auto_away": {
+            "type": "boolean"
+        },
+        "connection_count": {
+            "type": "integer"
+        },
+        "last_activity": {
+            "type": "integer"
+        },
+        "manual_away": {
+            "type": "boolean"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "online": {
+            "type": "boolean"
+        },
+        "presence": {
+            "type": "string"
+        }
+    }
+}

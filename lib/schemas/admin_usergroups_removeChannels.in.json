@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "usergroup_id": {
+                    "description": "ID of the IDP Group",
+                    "type": "string"
+                },
+                "channel_ids": {
+                    "description": "Comma-separated string of channel IDs",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "usergroup_id",
+                "channel_ids"
+            ]
+        }
+    }
+}

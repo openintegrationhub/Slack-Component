@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "channel": {
+            "type": "string"
+        },
+        "message": {
+            "properties": {
+                "attachments": {
+                    "items": {
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "blocks": {
+                    "type": "object"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "Message object",
+            "type": "object"
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "text": {
+            "type": "string"
+        },
+        "ts": {
+            "type": "string"
+        }
+    }
+}

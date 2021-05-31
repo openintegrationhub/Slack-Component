@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "properties": {
+        "logins": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "count": {
+                        "type": "integer"
+                    },
+                    "country": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "date_first": {
+                        "type": "integer"
+                    },
+                    "date_last": {
+                        "type": "integer"
+                    },
+                    "ip": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "isp": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "region": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "user_agent": {
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "pattern": "^[UW][A-Z0-9]{2,}$",
+                        "title": "User ID",
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "user_id",
+                    "username",
+                    "date_first",
+                    "date_last",
+                    "count",
+                    "ip",
+                    "user_agent",
+                    "isp",
+                    "country",
+                    "region"
+                ],
+                "type": "object"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "paging": {
+            "additionalProperties": false,
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "pages": {
+                    "type": "integer"
+                },
+                "per_page": {
+                    "type": "integer"
+                },
+                "spill": {
+                    "type": "integer"
+                },
+                "total": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "page",
+                "total"
+            ],
+            "title": "paging object",
+            "type": "object"
+        }
+    }
+}

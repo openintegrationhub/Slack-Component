@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "ok": {
+            "enum": [
+                true
+            ],
+            "title": "default success response",
+            "type": "boolean"
+        },
+        "response_metadata": {
+            "additionalProperties": false,
+            "properties": {
+                "next_cursor": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "next_cursor"
+            ],
+            "type": "object"
+        },
+        "scheduled_messages": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "channel_id": {
+                        "pattern": "^[C][A-Z0-9]{2,}$",
+                        "title": "Channel ID",
+                        "type": "string"
+                    },
+                    "date_created": {
+                        "pattern": "^\\d{10}$",
+                        "type": "integer"
+                    },
+                    "id": {
+                        "pattern": "^[Q][A-Z0-9]{8,}$",
+                        "type": "string"
+                    },
+                    "post_at": {
+                        "pattern": "^\\d{10}$",
+                        "type": "integer"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "channel_id",
+                    "post_at",
+                    "date_created"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}
