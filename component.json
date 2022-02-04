@@ -2,7 +2,7 @@
     "title": "Slack Web API",
     "description": "One way to interact with the Slack platform is its HTTP RPC-based Web API, a collection of methods requiring OAuth 2.0-based user, bot, or workspace tokens blessed with related OAuth scopes.",
     "docsUrl": "https://api.slack.com/web",
-    "url": "https://raw.githubusercontent.com/slackapi/slack-api-specs/master/web-api/slack_web_openapi_v2.json",
+    "url": "https://api.slack.com/specs/openapi/v2/slack_web.json",
     "envVars": {
         "OAUTH_CLIENT_ID": {
             "description": "OAuth Client ID"
@@ -466,36 +466,6 @@
             "metadata": {
                 "in": "./lib/schemas/apps_permissions_scopes_list.in.json",
                 "out": "./lib/schemas/apps_permissions_scopes_list.out.json"
-            }
-        },
-        "apps_permissions_users_list": {
-            "main": "./lib/triggers/apps_permissions_users_list.js",
-            "title": "apps_permissions_users_list",
-            "description": "Returns list of user grants and corresponding scopes this app has on a team.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/apps_permissions_users_list.in.json",
-                "out": "./lib/schemas/apps_permissions_users_list.out.json"
-            }
-        },
-        "apps_permissions_users_request": {
-            "main": "./lib/triggers/apps_permissions_users_request.js",
-            "title": "apps_permissions_users_request",
-            "description": "Enables an app to trigger a permissions modal to grant an app access to a user access scope.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/apps_permissions_users_request.in.json",
-                "out": "./lib/schemas/apps_permissions_users_request.out.json"
             }
         },
         "apps_uninstall": {
