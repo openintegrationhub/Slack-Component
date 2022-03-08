@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from users.profile.get method",
     "properties": {
         "ok": {
             "enum": [
@@ -206,5 +207,11 @@
             "title": "User profile object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "profile"
+    ],
+    "title": "users.profile.get schema",
+    "type": "object"
 }

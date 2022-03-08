@@ -5,7 +5,7 @@
             "type": "boolean"
         },
         "token": {
-            "required": true,
+            "required": false,
             "type": "string"
         },
         "include_count": {

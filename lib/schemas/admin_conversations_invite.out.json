@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of admin.conversations.invite",
     "properties": {
         "ok": {
             "enum": [
@@ -8,5 +9,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "admin.conversations.invite schema",
+    "type": "object"
 }

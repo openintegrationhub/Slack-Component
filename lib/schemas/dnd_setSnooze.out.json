@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from dnd.setSnooze method",
     "properties": {
         "ok": {
             "enum": [
@@ -17,5 +18,13 @@
         "snooze_remaining": {
             "type": "integer"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "snooze_enabled",
+        "snooze_endtime",
+        "snooze_remaining"
+    ],
+    "title": "dnd.setSnooze schema",
+    "type": "object"
 }

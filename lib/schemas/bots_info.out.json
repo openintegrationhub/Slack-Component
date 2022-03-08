@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from bots.info method",
     "properties": {
         "bot": {
             "additionalProperties": false,
@@ -69,5 +70,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "bot"
+    ],
+    "title": "bots.info schema",
+    "type": "object"
 }

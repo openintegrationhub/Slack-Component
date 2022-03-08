@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from users.setPhoto method",
     "properties": {
         "ok": {
             "enum": [
@@ -61,5 +62,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "profile"
+    ],
+    "title": "users.setPhoto schema",
+    "type": "object"
 }

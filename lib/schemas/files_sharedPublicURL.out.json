@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from files.sharedPublicURL method",
     "properties": {
         "file": {
             "additionalProperties": false,
@@ -309,5 +310,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "file"
+    ],
+    "title": "files.sharedPublicURL schema",
+    "type": "object"
 }

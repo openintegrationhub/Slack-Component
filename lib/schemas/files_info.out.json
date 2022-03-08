@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from files.info method",
     "properties": {
         "comments": {
             "items": {},
@@ -426,5 +427,12 @@
                 ]
             }
         }
-    }
+    },
+    "required": [
+        "ok",
+        "file",
+        "comments"
+    ],
+    "title": "files.info schema",
+    "type": "object"
 }

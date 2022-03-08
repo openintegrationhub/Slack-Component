@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from rtm.connect method",
     "properties": {
         "ok": {
             "enum": [
@@ -52,5 +53,13 @@
             "format": "uri",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "url",
+        "team",
+        "self"
+    ],
+    "title": "rtm.connect schema",
+    "type": "object"
 }

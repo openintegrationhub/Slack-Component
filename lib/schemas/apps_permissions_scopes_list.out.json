@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response api.permissions.scopes.list method",
     "properties": {
         "ok": {
             "enum": [
@@ -98,5 +99,11 @@
             },
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "scopes"
+    ],
+    "title": "api.permissions.scopes.list success schema",
+    "type": "object"
 }

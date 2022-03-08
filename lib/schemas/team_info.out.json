@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from team.info method",
     "properties": {
         "ok": {
             "enum": [
@@ -209,5 +210,11 @@
             "title": "Team Object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "team"
+    ],
+    "title": "team.info schema",
+    "type": "object"
 }

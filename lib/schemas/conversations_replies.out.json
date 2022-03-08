@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.replies method",
     "properties": {
         "has_more": {
             "type": "boolean"
@@ -268,5 +269,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "messages"
+    ],
+    "title": "conversations.replies success schema",
+    "type": "object"
 }

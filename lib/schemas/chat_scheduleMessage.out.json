@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of chat.scheduleMessage method",
     "properties": {
         "channel": {
             "pattern": "^[CGD][A-Z0-9]{8,}$",
@@ -122,5 +123,14 @@
             "title": "Scheduled Message ID",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel",
+        "post_at",
+        "scheduled_message_id",
+        "message"
+    ],
+    "title": "chat.scheduleMessage success schema",
+    "type": "object"
 }

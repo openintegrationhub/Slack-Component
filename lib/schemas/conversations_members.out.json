@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response conversations.members method",
     "properties": {
         "members": {
             "items": {
@@ -30,5 +31,12 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "members",
+        "response_metadata"
+    ],
+    "title": "conversations.members success schema",
+    "type": "object"
 }

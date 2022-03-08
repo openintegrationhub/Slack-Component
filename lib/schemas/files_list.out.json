@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from files.list method",
     "properties": {
         "files": {
             "items": {
@@ -343,5 +344,12 @@
             "title": "paging object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "files",
+        "paging"
+    ],
+    "title": "files.list schema",
+    "type": "object"
 }

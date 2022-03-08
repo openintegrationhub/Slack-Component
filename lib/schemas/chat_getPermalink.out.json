@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response chat.getPermalink",
     "properties": {
         "channel": {
             "pattern": "^[CGD][A-Z0-9]{8,}$",
@@ -17,5 +18,12 @@
             "format": "uri",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel",
+        "permalink"
+    ],
+    "title": "chat.getPermalink success schema",
+    "type": "object"
 }

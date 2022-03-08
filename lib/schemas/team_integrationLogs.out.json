@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from team.integrationLogs method",
     "properties": {
         "logs": {
             "items": {
@@ -98,5 +99,12 @@
             "title": "paging object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "logs",
+        "paging"
+    ],
+    "title": "team.integrationLogs schema",
+    "type": "object"
 }

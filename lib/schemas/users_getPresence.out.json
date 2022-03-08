@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Generated from users.getPresence with shasum e7251aec575d8863f9e0eb38663ae9dc26655f65",
     "properties": {
         "auto_away": {
             "type": "boolean"
@@ -26,5 +27,11 @@
         "presence": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "presence"
+    ],
+    "title": "API method: users.getPresence",
+    "type": "object"
 }

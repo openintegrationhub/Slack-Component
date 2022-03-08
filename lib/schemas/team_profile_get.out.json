@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from team.profile.get method",
     "properties": {
         "ok": {
             "enum": [
@@ -103,5 +104,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "profile"
+    ],
+    "title": "team.profile.get success schema",
+    "type": "object"
 }

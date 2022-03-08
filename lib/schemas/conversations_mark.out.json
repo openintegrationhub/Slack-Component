@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response conversations.mark method",
     "properties": {
         "ok": {
             "enum": [
@@ -8,5 +9,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "conversations.mark success schema",
+    "type": "object"
 }

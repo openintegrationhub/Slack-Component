@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from apps.permissions.info method",
     "properties": {
         "info": {
             "properties": {
@@ -433,5 +434,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "info"
+    ],
+    "title": "apps.permissions.info schema",
+    "type": "object"
 }

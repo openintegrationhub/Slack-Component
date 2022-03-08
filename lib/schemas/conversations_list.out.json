@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.list method",
     "properties": {
         "channels": {
             "items": {
@@ -4605,5 +4606,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channels"
+    ],
+    "title": "conversations.list success schema",
+    "type": "object"
 }

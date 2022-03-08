@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from users.profile.set method",
     "properties": {
         "email_pending": {
             "format": "email",
@@ -213,5 +214,12 @@
         "username": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "username",
+        "profile"
+    ],
+    "title": "users.profile.set schema",
+    "type": "object"
 }

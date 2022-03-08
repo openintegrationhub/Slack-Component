@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from dnd.endSnooze method",
     "properties": {
         "dnd_enabled": {
             "type": "boolean"
@@ -20,5 +21,14 @@
         "snooze_enabled": {
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "dnd_enabled",
+        "next_dnd_start_ts",
+        "next_dnd_end_ts",
+        "snooze_enabled"
+    ],
+    "title": "dnd.endSnooze schema",
+    "type": "object"
 }

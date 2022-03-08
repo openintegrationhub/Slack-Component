@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response conversations.close method",
     "properties": {
         "already_closed": {
             "type": "boolean"
@@ -14,5 +15,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "conversations.close success schema",
+    "type": "object"
 }
