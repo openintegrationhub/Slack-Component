@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from users.list method",
     "properties": {
         "cache_ts": {
             "type": "integer"
@@ -992,5 +993,12 @@
                 ]
             }
         }
-    }
+    },
+    "required": [
+        "ok",
+        "members",
+        "cache_ts"
+    ],
+    "title": "users.list schema",
+    "type": "object"
 }

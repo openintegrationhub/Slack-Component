@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from users.setPresence method",
     "properties": {
         "ok": {
             "enum": [
@@ -8,5 +9,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "users.setPresence schema",
+    "type": "object"
 }

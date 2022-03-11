@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.leave method",
     "properties": {
         "not_in_channel": {
             "enum": [
@@ -14,5 +15,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "conversations.leave success schema",
+    "type": "object"
 }

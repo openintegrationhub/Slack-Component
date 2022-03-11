@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from chat.postEphemeral method",
     "properties": {
         "message_ts": {
             "pattern": "^\\d{10}\\.\\d{6}$",
@@ -13,5 +14,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "message_ts"
+    ],
+    "title": "chat.postEphemeral success schema",
+    "type": "object"
 }

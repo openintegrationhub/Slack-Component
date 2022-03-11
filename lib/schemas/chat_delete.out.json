@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of chat.delete method",
     "properties": {
         "channel": {
             "pattern": "^[CGD][A-Z0-9]{8,}$",
@@ -18,5 +19,12 @@
             "title": "Timestamp in format 0123456789.012345",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel",
+        "ts"
+    ],
+    "title": "chat.delete success schema",
+    "type": "object"
 }

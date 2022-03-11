@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response conversations.create method",
     "properties": {
         "channel": {
             "items": {
@@ -4589,5 +4590,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel"
+    ],
+    "title": "conversations.create success schema",
+    "type": "object"
 }

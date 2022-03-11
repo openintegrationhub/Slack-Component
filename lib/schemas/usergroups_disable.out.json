@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from usergroups.disable method",
     "properties": {
         "ok": {
             "enum": [
@@ -158,5 +159,11 @@
             "title": "Subteam/Usergroup Object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "usergroup"
+    ],
+    "title": "usergroups.disable schema",
+    "type": "object"
 }

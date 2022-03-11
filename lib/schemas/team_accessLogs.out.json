@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from team.accessLogs method",
     "properties": {
         "logins": {
             "items": {
@@ -96,5 +97,12 @@
             "title": "paging object",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "logins",
+        "paging"
+    ],
+    "title": "team.accessLogs schema",
+    "type": "object"
 }

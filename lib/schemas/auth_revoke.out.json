@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from auth.revoke method",
     "properties": {
         "ok": {
             "enum": [
@@ -11,5 +12,11 @@
         "revoked": {
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "revoked"
+    ],
+    "title": "auth.revoke schema",
+    "type": "object"
 }

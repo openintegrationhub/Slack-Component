@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response from users.lookupByEmail method",
     "properties": {
         "ok": {
             "enum": [
@@ -909,5 +910,11 @@
                 ]
             }
         }
-    }
+    },
+    "required": [
+        "ok",
+        "user"
+    ],
+    "title": "users.lookupByEmail success schema",
+    "type": "object"
 }

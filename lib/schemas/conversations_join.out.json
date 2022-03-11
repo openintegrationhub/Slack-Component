@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.join method",
     "properties": {
         "channel": {
             "items": {
@@ -4606,5 +4607,11 @@
         "warning": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel"
+    ],
+    "title": "conversations.join success schema",
+    "type": "object"
 }

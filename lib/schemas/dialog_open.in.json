@@ -2,7 +2,7 @@
     "type": "object",
     "properties": {
         "token": {
-            "required": true,
+            "required": false,
             "type": "string"
         },
         "dialog": {

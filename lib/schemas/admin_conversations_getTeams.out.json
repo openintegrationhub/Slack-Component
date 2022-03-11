@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of admin.conversations.getTeams",
     "properties": {
         "ok": {
             "enum": [
@@ -28,5 +29,11 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "team_ids"
+    ],
+    "title": "admin.conversations.getTeams schema",
+    "type": "object"
 }

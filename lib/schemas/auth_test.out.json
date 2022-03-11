@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response auth.test method",
     "properties": {
         "bot_id": {
             "pattern": "^B[A-Z0-9]{8,}$",
@@ -35,5 +36,15 @@
             "title": "User ID",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "url",
+        "team",
+        "user",
+        "team_id",
+        "user_id"
+    ],
+    "title": "auth.test success schema",
+    "type": "object"
 }

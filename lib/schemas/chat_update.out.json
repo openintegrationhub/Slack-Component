@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of chat.update method",
     "properties": {
         "channel": {
             "type": "string"
@@ -38,5 +39,14 @@
         "ts": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel",
+        "ts",
+        "text",
+        "message"
+    ],
+    "title": "chat.update success schema",
+    "type": "object"
 }

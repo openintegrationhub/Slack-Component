@@ -1,5 +1,8 @@
 {
-    "type": "object",
+    "additionalProperties": {
+        "type": "object"
+    },
+    "description": "Schema for successful response api.test method",
     "properties": {
         "ok": {
             "enum": [
@@ -8,5 +11,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "api.test success schema",
+    "type": "object"
 }

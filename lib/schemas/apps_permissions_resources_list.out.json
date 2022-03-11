@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response apps.permissions.resources.list method",
     "properties": {
         "ok": {
             "enum": [
@@ -48,5 +49,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "resources"
+    ],
+    "title": "apps.permissions.resources.list success schema",
+    "type": "object"
 }

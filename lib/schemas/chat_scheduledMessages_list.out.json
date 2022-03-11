@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from chat.scheduledMessages.list method",
     "properties": {
         "ok": {
             "enum": [
@@ -55,5 +56,12 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "scheduled_messages",
+        "response_metadata"
+    ],
+    "title": "chat.scheduledMessages.list schema",
+    "type": "object"
 }

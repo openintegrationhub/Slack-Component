@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from usergroups.users.list method",
     "properties": {
         "ok": {
             "enum": [
@@ -16,5 +17,11 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "users"
+    ],
+    "title": "usergroups.users.list schema",
+    "type": "object"
 }

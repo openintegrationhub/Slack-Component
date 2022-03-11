@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.history method",
     "properties": {
         "channel_actions_count": {
             "type": "integer"
@@ -1087,5 +1088,15 @@
         "pin_count": {
             "type": "integer"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "messages",
+        "has_more",
+        "pin_count",
+        "channel_actions_ts",
+        "channel_actions_count"
+    ],
+    "title": "conversations.history success schema",
+    "type": "object"
 }

@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response from migration.exchange method",
     "properties": {
         "enterprise_id": {
             "title": "The enterprise grid organization ID containing the workspace/team.",
@@ -29,5 +30,12 @@
             "title": "A mapping of provided user IDs with mapped user IDs",
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "team_id",
+        "enterprise_id"
+    ],
+    "title": "migration.exchange success schema",
+    "type": "object"
 }

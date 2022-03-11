@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from reactions.remove method",
     "properties": {
         "ok": {
             "enum": [
@@ -8,5 +9,10 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "reactions.remove schema",
+    "type": "object"
 }

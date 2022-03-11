@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response of admin.conversations.search",
     "properties": {
         "channels": {
             "items": {
@@ -1251,5 +1252,11 @@
         "next_cursor": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "channels",
+        "next_cursor"
+    ],
+    "title": "admin.conversations.search schema",
+    "type": "object"
 }

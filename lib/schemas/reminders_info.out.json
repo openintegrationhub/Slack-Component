@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from reminders.info method",
     "properties": {
         "ok": {
             "enum": [
@@ -48,5 +49,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "reminder"
+    ],
+    "title": "reminders.info schema",
+    "type": "object"
 }

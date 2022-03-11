@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from chat.meMessage method",
     "properties": {
         "channel": {
             "pattern": "^[CGD][A-Z0-9]{8,}$",
@@ -18,5 +19,10 @@
             "title": "Timestamp in format 0123456789.012345",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "ok"
+    ],
+    "title": "chat.meMessage schema",
+    "type": "object"
 }

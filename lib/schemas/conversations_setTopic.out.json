@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.setTopic method",
     "properties": {
         "channel": {
             "items": {
@@ -4589,5 +4590,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel"
+    ],
+    "title": "conversations.setTopic success schema",
+    "type": "object"
 }

@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response from users.info method",
     "properties": {
         "ok": {
             "enum": [
@@ -909,5 +910,11 @@
                 ]
             }
         }
-    }
+    },
+    "required": [
+        "ok",
+        "user"
+    ],
+    "title": "users.info success schema",
+    "type": "object"
 }

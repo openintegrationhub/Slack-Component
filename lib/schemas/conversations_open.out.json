@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": false,
+    "description": "Schema for successful response from conversations.open method when opening channels, ims, mpims",
     "properties": {
         "already_open": {
             "type": "boolean"
@@ -5693,5 +5694,11 @@
             "title": "default success response",
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channel"
+    ],
+    "title": "conversations.open success schema",
+    "type": "object"
 }

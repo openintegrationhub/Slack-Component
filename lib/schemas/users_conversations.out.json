@@ -1,5 +1,6 @@
 {
-    "type": "object",
+    "additionalProperties": true,
+    "description": "Schema for successful response from users.conversations method. Returned conversation objects do not include `num_members` or `is_member`",
     "properties": {
         "channels": {
             "items": {
@@ -4605,5 +4606,11 @@
             ],
             "type": "object"
         }
-    }
+    },
+    "required": [
+        "ok",
+        "channels"
+    ],
+    "title": "users.conversations success schema",
+    "type": "object"
 }
